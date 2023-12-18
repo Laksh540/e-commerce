@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import cartIcon from "../../assets/cart.svg";
+import cartIcon from "../../assets/icons/cart.svg";
 
 const Header = () => {
   return (

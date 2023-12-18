@@ -1,0 +1,88 @@
+const data = [
+  {
+    id: 122,
+    brandName: "Apple",
+    name: "iPhone 14 (Blue, 128 GB)",
+    image: require("../assets/Image/iphone-14.jpeg"),
+    price: 58999,
+  },
+  {
+    id: 123,
+    brandName: "Apple",
+    name: "Watch Ultra GPS + Cellular - ECG App, Temp sensor, Blood oxygen, Fall Detection  (Orange Alpine Strap, Small)",
+    image: require("../assets/Image/apple-watch-ultra.webp"),
+    price: 82999,
+  },
+  {
+    id: 124,
+    brandName: "Allen Solly",
+    name: "Men Regular Fit Striped  Casual Shirt",
+    image: require("../assets/Image/short-sleeve-pink-shirt.webp"),
+    price: 741,
+  },
+  {
+    id: 125,
+    brandName: "Allen Solly",
+    name: "Men Regular Fit Striped Spread Collar Casual Shirt",
+    image: require("../assets/Image/black-shirt-striped.webp"),
+    price: 1120,
+  },
+  {
+    id: 126,
+    brandName: "PUMA",
+    name: "ESS Slim Pants Men Solid Black Track Pants",
+    image: require("../assets/Image/black-track-pant.webp"),
+    price: 1120,
+  },
+  {
+    id: 127,
+    brandName: "SAMSUNG",
+    name: "Galaxy F14 5G (B.A.E. Purple, 128 GB)  (4 GB RAM)",
+    image: require("../assets/Image/galaxy-f14.webp"),
+    price: 58999,
+  },
+  {
+    id: 128,
+    brandName: "LEADER",
+    name: "Spyder MTB Cycle/Bike with Complete Accessories 27.5 T Mountain Cycle  (Single Speed, Black, Orange)",
+    image: require("../assets/Image/bicycle.webp"),
+    price: 4999,
+  },
+  {
+    id: 129,
+    brandName: "Raymond",
+    name: "Men Slim Fit Gray Trousers",
+    image: require("../assets/Image/slim-fit-gray-pant.webp"),
+    price: 1120,
+  },
+  {
+    id: 130,
+    brandName: "brother",
+    name: "DCP-B7500D Multi-function Monochrome Laser Printer  (Grey, Toner Cartridge)",
+    image: require("../assets/Image/printer.webp"),
+    price: 1120,
+  },
+  {
+    id: 131,
+    brandName: "U.S. POLO ASSN. ",
+    name: "Men Regular Fit Striped Button Down Collar Casual Shirt",
+    image: require("../assets/Image/vertical-stripped-shirt.webp"),
+    price: 1120,
+  },
+  {
+    id: 131,
+    brandName: "The Indian Garage Co. ",
+    name: "Men Slim Fit Solid Spread Collar Casual Shirt",
+    image: require("../assets/Image/white-shirt.webp"),
+    price: 490,
+  },
+  {
+    id: 132,
+    brandName: "PARK AVENUE",
+    name: "Men Slim Fit Striped Casual Shirt",
+    image: require("../assets/Image/slim-fit-stripped-shirt.webp"),
+    price: 1190,
+  },
+];
+
+export const DummyProductList = JSON.stringify(data);

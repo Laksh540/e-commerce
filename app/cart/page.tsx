@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 import Header from "../Components/Header/Header";
 import { productsRoute } from "../routes";
 
-const cartList = () => {
+const CartList = () => {
   const router = useRouter();
   const cartProducts = useSelector((product: RootState) => product.cart);
   const dispatch: AppDispatch = useDispatch();
@@ -94,4 +94,4 @@ const cartList = () => {
   );
 };
 
-export default cartList;
+export default CartList;

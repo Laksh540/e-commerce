@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import Providers from "./State/Providers";
 // Supports weights 100-900
 
 const montserrat = Montserrat({ subsets: ["latin"], fallback: ["sans-serif"] });
@@ -17,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

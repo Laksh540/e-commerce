@@ -1,51 +1,21 @@
-// "use client";
-import Image from "next/image";
-import Header from "./Components/Header/Header";
-import { DummyProductList } from "./DummyData/ProductList";
-import { Fragment } from "react";
+"use client";
 
-export interface Product {
-  id: number;
-  image: {
-    default: {
-      src: string;
-    };
-  };
-  price: number;
-  brandName: string;
-  name: string;
-}
+import { useEffect } from "react";
+import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
-const ProductListing = () => {
-  console.log("dummy data", DummyProductList);
-  const productList = JSON.parse(DummyProductList);
+const Welcome = () => {
+  const router = useRouter();
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/products");
+    }, 1000);
+  }, []);
   return (
-    <main className=" p-9">
-      <Header />
-      <div className="grid grid-cols-4 gap-5 mt-11">
-        {productList.map((product: Product) => (
-          <div
-            className="hover:-translate-y-1 hover:shadow-xl border rounded-md cursor-pointer "
-            key={product?.id}
-          >
-            <div className="flex justify-center  h-52">
-              <img
-                src={product?.image?.default?.src ?? ""}
-                className=" h-52 object-cover"
-              />
-            </div>
-            <div className="p-3 ">
-              <span className="block mb-1.5">{product.brandName}</span>
-              <span className="block truncate mb-1.5" title={product.name}>
-                {product.name}
-              </span>
-              <span className="block">{`₹${product.price}`}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </main>
+    <div className=" p-9 h-screen flex justify-center items-center text-3xl">
+      Welcome to E-commerce
+    </div>
   );
 };
 
-export default ProductListing;
+export default Welcome;

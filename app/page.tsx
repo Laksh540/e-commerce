@@ -3,12 +3,13 @@
 import { useEffect } from "react";
 import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { productsRoute } from "./routes";
 
 const Welcome = () => {
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => {
-      router.push("/products");
+      router.push(productsRoute);
     }, 1000);
   }, []);
   return (

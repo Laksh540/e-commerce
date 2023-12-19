@@ -11,7 +11,7 @@ const cartSlice = createSlice({
   extraReducers(builder) {
     builder
       .addCase(addToCartAsync.pending, () => {
-        console.log("Action pending");
+        console.log("Add action pending");
       })
       .addCase(
         addToCartAsync.fulfilled,
@@ -21,6 +21,30 @@ const cartSlice = createSlice({
           }
           state.push({ ...action.payload });
         }
+      )
+      .addCase(removeCartItemAsync.pending, () => {
+        console.log("Remove action pending");
+      })
+      .addCase(
+        removeCartItemAsync.fulfilled,
+        (state, action: PayloadAction<number>) => {
+          // let updatedState = state.filter(
+          //   (product) => product.id !== action.payload
+          // );
+          state = state.splice(action.payload, 1);
+        }
+      )
+      .addCase(removeAllItemAsync.pending, () => {
+        console.log("Remove all action pending");
+      })
+      .addCase(
+        removeAllItemAsync.fulfilled,
+        (state, action: PayloadAction<number>) => {
+          // let updatedState = state.filter(
+          //   (product) => product.id !== action.payload
+          // );
+          state.splice(0, action.payload);
+        }
       );
   },
 });
@@ -28,8 +52,21 @@ const cartSlice = createSlice({
 export const addToCartAsync = createAsyncThunk(
   "cart/addToCartAsync",
   async (product: IProduct) => {
-    // await new Promise((resolve) => setTimeout(resolve, 1000));
     return product;
+  }
+);
+
+export const removeCartItemAsync = createAsyncThunk(
+  "cart/removeCartItemAsync",
+  async (productIndex: number) => {
+    return productIndex;
+  }
+);
+
+export const removeAllItemAsync = createAsyncThunk(
+  "cart/removeAllItemAsync",
+  async (totalProducts: number) => {
+    return totalProducts;
   }
 );
 
